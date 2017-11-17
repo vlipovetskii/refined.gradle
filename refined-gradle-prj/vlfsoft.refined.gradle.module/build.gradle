@@ -1,0 +1,8 @@
+dependencies kotlinStdlibDep
+
+dependencies commonSdAnnotationsDep
+
+apply from: '../../jarProperties.gradle'
+jarProp()
+
+

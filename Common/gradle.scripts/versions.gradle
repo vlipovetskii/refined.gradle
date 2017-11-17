@@ -1,0 +1,35 @@
+//--BEG: gradle
+    ext.customGradleVersion = '4.3.1'
+//--END: gradle
+
+//--BEG: kotlin
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-maven-plugin
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-maven-allopen -- = '
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-maven-noarg -- = '
+	ext.kotlinPluginVersion = '1.1.60'
+	
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jre8
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit
+	// https://github.com/kotlintest/kotlintest KotlinTest is a flexible and comprehensive testing tool for Kotlin. -- = '
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test
+	ext.kotlin_stdlibVersion = kotlinPluginVersion
+	
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin
+	ext.jackson_module_kotlinVersion = '2.9.2'
+	
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlinx
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8
+	ext.kotlinxVersion = '0.19.3'
+
+//--END: kotlin
+
+//--BEG: html parsers
+
+        // https://mvnrepository.com/artifact/org.jsoup/jsoup
+        ext.jsoupVersion = '1.10.3'
+
+//--END: html parsers
+

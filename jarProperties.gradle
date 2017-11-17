@@ -1,0 +1,29 @@
+ext.jarProp = {
+
+// project.group
+    group = 'vlfsoft'
+
+// https://kotlinlang.org/docs/reference/using-gradle.html#module-names
+// archivesBaseName = 'myExampleProject_lib'
+
+// project version
+     version = 1.0 // -> vlfsoft.module-1.0.jar
+
+}
+
+ext.jarLibProp = {
+    jarProp()
+}
+
+ext.jarAppProp = {
+    jarProp()
+
+// META-INF\MANIFEST.MF
+// Main-Class: vlfsoft.TestClassKt
+    jar {
+        manifest {
+            attributes 'Main-Class': "$mainClassName"
+        }
+    }
+
+}

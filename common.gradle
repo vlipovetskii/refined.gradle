@@ -1,0 +1,10 @@
+def gradleScriptsDir = "$commonDir/gradle.scripts"
+
+apply from: "$gradleScriptsDir/allprojectsx.gradle"
+
+apply from: "$gradleScriptsDir/versions.gradle"
+
+apply from: "$gradleScriptsDir/buildscript.gradle"
+
+apply from: "$gradleScriptsDir/kotlinStdlib.gradle"
+apply from: "$gradleScriptsDir/htmlParsers.gradle"

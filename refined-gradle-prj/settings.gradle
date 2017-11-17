@@ -1,0 +1,18 @@
+ext.commonDir = '../Common'
+apply from: '../vlfsoftCommon.gradle'
+
+// AND, if there are many internal sub-projects in the project with dependencies of each other
+apply from: 'projectCommon.gradle'
+
+includeCommonSdAnnotations()
+includeCommonUtil()
+
+//include ':vlfsoft.refined.gradle.app'
+//include ':vlfsoft.refined.gradle.module'
+
+// OR, if there are many internal sub-projects in the project with dependencies of each other
+
+includeProjectRefinedGradleApp()
+includeProjectRefinedGradleModule()
+
+

@@ -1,0 +1,18 @@
+ext.kotlinStdlibDep = {
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jre8
+	compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jre8', version: kotlinPluginVersion
+
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-test-junit
+	testCompile group: 'org.jetbrains.kotlin', name: 'kotlin-test-junit', version: kotlinPluginVersion
+
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect
+	compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinPluginVersion
+	
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin
+	compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: jackson_module_kotlinVersion
+
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8
+	compile group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-jdk8', version: kotlinxVersion
+
+}
+

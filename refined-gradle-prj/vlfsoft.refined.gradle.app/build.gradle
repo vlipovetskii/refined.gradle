@@ -1,0 +1,20 @@
+apply plugin: 'application'
+
+dependencies kotlinStdlibDep
+
+dependencies commonSdAnnotationsDep
+dependencies commonUtilDep
+
+/*
+dependencies {
+    compile project(':vlfsoft.refined.gradle.module')
+}
+*/
+
+// OR, if there are many internal sub-projects in the project with dependencies of each other
+dependencies projectRefinedGradleModuleDep
+
+apply from: '../../jarProperties.gradle'
+// https://stackoverflow.com/questions/26469365/building-a-self-executable-jar-with-gradle-and-kotlin
+mainClassName = 'vlfsoft.refined.gradle.ApplicationKt'
+jarAppProp()

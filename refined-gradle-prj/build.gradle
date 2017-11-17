@@ -1,0 +1,22 @@
+buildscript {
+
+    ext.commonDir = '../Common'
+    apply from: '../common.gradle'
+
+    repositories buildscriptCommonRepo
+    dependencies buildscriptKotlinPluginDep
+
+    apply from: '../vlfsoftCommon.gradle'
+
+    // AND, if there are many internal sub-projects in the project with dependencies of each other
+    apply from: 'projectCommon.gradle'
+
+}
+
+allprojects allprojectsCommon
+allprojects allprojectsKotlin
+
+task wrapper(type: Wrapper) {
+    gradleVersion = customGradleVersion
+}
+

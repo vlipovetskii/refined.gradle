@@ -1,0 +1,28 @@
+ext.allprojectsCommon8 = {
+
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories buildscriptCommonRepo
+}
+
+ext.allprojectsCommon9 = {
+
+    apply plugin: 'java'
+    sourceCompatibility = 9
+    targetCompatibility = 9
+
+    repositories buildscriptCommonRepo
+}
+
+ext.allprojectsCommon = ext.allprojectsCommon8
+
+ext.allprojectsKotlin = {
+
+    apply plugin: 'kotlin'
+    compileKotlin {
+        kotlinOptions.jvmTarget = '1.8'
+    }
+
+}

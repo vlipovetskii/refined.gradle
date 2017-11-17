@@ -1,0 +1,33 @@
+ext.rootProjectDir = rootProject.projectDir
+
+ext.includeProjectRefinedGradleApp = {
+    def moduleName = 'vlfsoft.refined.gradle.app'
+	include(moduleName)
+    setProjectDir((String) moduleName)
+}
+/*
+ext.projectRefinedGradleAppDep = {
+    def moduleName = 'vlfsoft.refined.gradle.app'
+    addDep((DependencyHandler) getDelegate(), "compile", moduleName)
+}
+*/
+
+ext.includeProjectRefinedGradleModule = {
+    def moduleName = 'vlfsoft.refined.gradle.module'
+	include(moduleName)
+    setProjectDir((String) moduleName)
+}
+ext.projectRefinedGradleModuleDep = {
+    def moduleName = 'vlfsoft.refined.gradle.module'
+    addDep((DependencyHandler) getDelegate(), "compile", moduleName)
+}
+
+void addDep(DependencyHandler dependencyHandler, String configurationName, String dependencyNotation) {
+    dependencyHandler.add(configurationName, project(":$dependencyNotation"))
+}
+
+void setProjectDir (String projectName) {
+    project(":$projectName").projectDir = new File(rootProjectDir, "$projectName")
+}
+
+

@@ -1,0 +1,10 @@
+ext.buildscriptCommonRepo = {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+ext.buildscriptKotlinPluginDep = {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinPluginVersion"
+}
+

@@ -1,0 +1,31 @@
+ext.rootProjectDir = rootProject.projectDir
+
+void addDep(DependencyHandler dependencyHandler, String configurationName, String dependencyNotation) {
+    dependencyHandler.add(configurationName, project(":$dependencyNotation"))
+}
+
+void setProjectDir (String projectName) {
+    project(":$projectName").projectDir = new File(rootProjectDir, "$commonDir/$projectName")
+}
+
+ext.includeCommonSdAnnotations = {
+    def moduleName = 'vlfsoft.sdannotations'
+    include(moduleName)
+    setProjectDir((String) moduleName)
+}
+ext.commonSdAnnotationsDep = {
+    def moduleName = 'vlfsoft.sdannotations'
+    addDep((DependencyHandler) getDelegate(), "compileOnly", moduleName)
+    addDep((DependencyHandler) getDelegate(), "testCompileOnly", moduleName)
+}
+
+ext.includeCommonUtil = {
+    def moduleName = 'vlfsoft.util'
+    include(moduleName)
+    setProjectDir((String) moduleName)
+}
+ext.commonUtilDep = {
+    def moduleName = 'vlfsoft.util'
+    addDep((DependencyHandler) getDelegate(), "compile", moduleName)
+}
+
